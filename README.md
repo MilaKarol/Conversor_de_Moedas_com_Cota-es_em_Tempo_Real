@@ -24,15 +24,49 @@ Este projeto é uma aplicação web de conversão de moedas, desenvolvida com HT
 4. **Converter**: Clique no botão **Converter** para realizar a conversão.
 5. **Limpar formulário**: Clique no botão **Limpar** para redefinir o formulário.
 
+## Estilos Personalizados (cont.css)
+
+O arquivo `cont.css` define os estilos visuais personalizados da página para criar uma aparência moderna e agradável. Abaixo estão as principais customizações:
+
+- **Cor de fundo da página** (`body`): Um tom de roxo escuro (#1d1429) cria um contraste sofisticado com os elementos do conversor.
+- **Container principal** (`.container`): 
+  - Altura de 80% da viewport e largura máxima de 30%.
+  - Margem esquerda de 5rem para alinhamento e fundo em roxo claro (#7250cf), que destaca o conteúdo do conversor.
+- **Botões de ação** (`.btn-primary`):
+  - Estilizados com bordas arredondadas e sem borda externa.
+  - Cor de fundo em rosa claro (rgb(214, 146, 235)) e sombra de texto para efeito de brilho.
+  - Animação ao passar o cursor (`hover`): reduz ligeiramente o tamanho e adiciona uma sombra sutil, com alteração de cor para um tom mais claro.
+- **Títulos** (`h1` e `h2`): Cores personalizadas e centralização:
+  - `h1` usa um tom de rosa claro (rgb(255, 187, 187)).
+  - `h2` está alinhado mais à direita, com um tom roxo acinzentado (rgb(152, 87, 182)).
+- **Imagem decorativa** (`img`): 
+  - Posicionada à direita da página, com 15% de largura, para complementar o design.
+- **Seletores de Moeda** (`.form-select`):
+  - Bordas arredondadas, cor de fundo branca, e borda roxa (#6c63ff).
+  - Cursor personalizado para melhorar a interatividade.
+
+## Funções JavaScript (cont.js)
+
+O arquivo `cont.js` contém as principais funcionalidades de conversão de moeda e manipulação de interface. Abaixo estão descritas algumas funções esperadas:
+
+- **Função de Conversão**:
+  - Esta função obtém os valores inseridos pelo usuário (valor a ser convertido, moeda de origem e moeda de destino).
+  - Realiza a conversão com base nas taxas de câmbio, que podem ser obtidas de uma API externa (como ExchangeRate-API ou Fixer.io).
+  - Exibe o valor convertido na interface.
+
+- **Função de Limpeza de Formulário**:
+  - Esta função limpa os campos do formulário e redefine os seletores de moeda para os valores padrão.
+  - Facilita a experiência do usuário ao permitir uma reinicialização rápida da interface.
+
+- **Função de Manipulação de Erros**:
+  - Verifica se o valor inserido é válido (por exemplo, não vazio e numérico).
+  - Exibe uma mensagem de erro caso haja um problema com o valor inserido ou com a resposta da API de câmbio.
+
 ## Estrutura do Projeto
 
 - **index.html**: Estrutura da página e layout do formulário de conversão.
-- **cont.css**: Estilos adicionais aplicados à página.
+- **cont.css**: Estilos personalizados para o projeto.
 - **cont.js**: Lógica de conversão e manipulação do DOM.
-
-## Requisitos
-
-Para o correto funcionamento da aplicação, é recomendável o uso de um navegador moderno.
 
 ## Próximos Passos
 
@@ -46,9 +80,9 @@ A interface é composta por:
 - Seletor de moedas para a moeda de origem e moeda de destino.
 - Botões para **Converter** e **Limpar** o formulário.
 
-## Imagem do projeto
+## Imagem do Projeto
 
-![](img1.png)
+![Captura de Tela do Conversor](img1.png)
 
 ---
 

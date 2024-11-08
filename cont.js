@@ -1,12 +1,12 @@
-const apiKey = `6c2e94c0c364f63d85c4621b`
-const apiURL =  `https://v6.exchangerate-api.com/v6/${apiKey}/latest/USD `
+const apiKey = `6c2e94c0c364f63d85c4621b`;
+const apiURL =  `https://v6.exchangerate-api.com/v6/${apiKey}/latest/`;
 
-async function getExchangeRates(deMoeda, paraMoeda){
+async function getExchangeRates(daMoeda, paraMoeda){
     try {
-        const response = await fetch(`${apiUrl}${daMoeda}`);
-        const data = response.json();
+        const response = await fetch(`${apiURL}${daMoeda}`);
+        const data = await response.json();
  
-        if (data === "success") {
+        if (data.result === "success") {
             return data.conversion_rates[paraMoeda];
         } else {
             throw new Error("Erro ao buscar taxa de câmbio");
@@ -27,17 +27,16 @@ document.getElementById('form').addEventListener('submit', async function(event)
     const daMoeda = document.getElementById('daMoeda').value;
     const paraMoeda = document.getElementById('paraMoeda').value;
 
-    const exchangeRate = await getExchangeRate(daMoeda, paraMoeda);
+    const exchangeRate = await getExchangeRates(daMoeda, paraMoeda);
 
     if(exchangeRate){
-        const covertedValue = valor * exchangeRates;
-
-
-        // console.log(covertedValue);
+        const convertedValue = valor * exchangeRate;
 
         const conversao = document.getElementById('conversão');
-        conversao.textContent = `Resultado: ${convertedValue.toFixed(2)}$ {paraMoeda}`;
+        conversao.textContent = `Resultado: ${convertedValue.toFixed(2)}${paraMoeda}`;
     } else{ 
         alert('Erro ao buscar a cotação. Tente novamente');
     }
 })
+
+

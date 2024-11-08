@@ -82,7 +82,7 @@ A interface é composta por:
 
 ## Imagem do Projeto
 
-![Captura de Tela do Conversor](img1.png)
+![Captura de Tela do Conversor](projeto.png)
 
 ---
 

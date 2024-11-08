@@ -46,9 +46,9 @@ A interface é composta por:
 - Seletor de moedas para a moeda de origem e moeda de destino.
 - Botões para **Converter** e **Limpar** o formulário.
 
-## Captura de Tela
+## Imagem do projeto
 
-![Captura de Tela do Conversor](img1.png)
+![](img1.png)
 
 ---
 
